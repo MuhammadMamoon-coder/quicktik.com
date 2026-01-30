@@ -1,0 +1,648 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(90deg, #4b39ef 0%, #c300ff 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background: rgba(255, 255, 255, 0.1); /* Subtle glass effect */
+  backdrop-filter: blur(5px);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  background: #4b39ef;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+
+/* Hero Content */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Input Box */
+.input-container {
+  background: #e9e5ff;
+  width: 80%;
+  max-width: 800px;
+  display: flex;
+  padding: 6px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.input-container input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 15px;
+  font-size: 1rem;
+  outline: none;
+  color: #333;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-paste {
+  background: white;
+  border: 1px solid #ddd;
+  color: #4b39ef;
+  padding: 0 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-download {
+  background: #4b39ef;
+  color: white;
+  border: none;
+  padding: 0 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+
+.features-section {
+  background-color: #f1f1f1; /* Light grey background */
+  padding: 60px 20px;
+  color: #2c3e50; /* Navy blue/dark slate text color */
+  text-align: center;
+}
+
+/* Three-column layout */
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+}
+
+.feature-item {
+  flex: 1;
+}
+
+.feature-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #1a237e; /* Darker navy for headings */
+  font-weight: 800;
+}
+
+.feature-item p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #3f51b5; /* Slightly lighter blue for subtext */
+}
+
+/* Bottom Description Styles */
+.description-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.description-container h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1a237e;
+  font-weight: 700;
+}
+
+.description-container p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #283593;
+  text-align: left; /* Aligned left as per the image */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .features-grid {
+      flex-direction: column;
+      gap: 30px;
+  }
+  
+  .description-container p {
+      text-align: center;
+  }
+}
+.how-to-section {
+  background-color: #f1f1f1;
+  padding: 40px 20px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-text {
+  align-self: flex-start;
+  margin-left: 20%;
+  color: #d100ff; /* Bright magenta from the screenshot */
+  font-style: italic;
+  font-size: 1.2rem;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.arrow-icon {
+  font-size: 3rem;
+  position: absolute;
+  right: -60px;
+  top: 10px;
+  transform: rotate(20deg);
+  font-style: normal;
+}
+
+.how-to-card {
+  background-color: #5d45fd; /* Vibrant blue/purple */
+  width: 100%;
+  max-width: 850px;
+  border-radius: 40px;
+  padding: 50px 60px;
+  color: white;
+  box-shadow: 0 20px 40px rgba(93, 69, 253, 0.3);
+}
+
+.how-to-card h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Large faded numbers behind text */
+.bg-number {
+  position: absolute;
+  left: -20px;
+  top: -10px;
+  font-size: 6rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.15); /* Subtle dark overlay effect */
+  line-height: 1;
+  z-index: 1;
+}
+
+.step-content {
+  position: relative;
+  z-index: 2;
+  padding-left: 40px;
+}
+
+.step-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  font-weight: 800;
+}
+
+.step-content p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .how-to-card {
+      padding: 40px 25px;
+      border-radius: 25px;
+  }
+  .intro-text {
+      margin-left: 5%;
+  }
+}
+.benefits-section {
+  background-color: #f1f1f1;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefits-intro {
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.benefits-intro p {
+  color: #2c3e50;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-wrapper {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #5d45fd; /* Main brand purple */
+  /* Soft glow effect similar to the screenshot */
+  filter: drop-shadow(0 0 8px rgba(93, 69, 253, 0.2));
+}
+
+.icon-wrapper svg {
+  width: 70px;
+  height: 70px;
+}
+
+.benefit-item p {
+  color: #3f51b5;
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 250px;
+}
+
+/* Responsive: 2 columns for tablets, 1 for mobile */
+@media (max-width: 900px) {
+  .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits-grid {
+      grid-template-columns: 1fr;
+  }
+}
+.mobile-guide-section {
+  background-color: #f1f1f1;
+  padding: 80px 20px;
+  color: #1a237e; /* Navy blue */
+}
+
+.mobile-guide-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+/* Left Text Area */
+.guide-text {
+  flex: 1;
+}
+
+.intro-label {
+  color: #d100ff; /* Bright magenta */
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.curved-arrow {
+  position: absolute;
+  right: -50px;
+  top: 5px;
+  font-size: 2.5rem;
+  transform: rotate(15deg);
+  font-style: normal;
+}
+
+.guide-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.guide-paragraphs p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
+/* Right Image Area */
+.guide-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.guide-image img {
+  max-width: 100%;
+  height: auto;
+  /* Optional: Add a subtle float animation to match the 3D look */
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive Tablet/Mobile */
+@media (max-width: 992px) {
+  .mobile-guide-section .container {
+      flex-direction: column;
+      text-align: left;
+  }
+  
+  .guide-image {
+      order: -1; /* Image appears above text on mobile */
+      margin-bottom: 40px;
+  }
+}
+.pc-guide-section {
+  background-color: #f1f1f1;
+  padding: 80px 20px;
+  color: #1a237e;
+}
+
+.pc-guide-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 60px; /* Slightly wider gap for the laptop graphic */
+}
+
+/* Specific styling for the PC heading to match the weight in the screenshot */
+.pc-guide-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1a237e;
+  max-width: 400px; /* Matches the line break in the image */
+}
+
+/* Reusing paragraph styles for consistency */
+.pc-guide-section .guide-paragraphs p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
+/* Image styling with the same floating animation as the mobile section */
+.pc-guide-section .guide-image img {
+  max-width: 100%;
+  height: auto;
+  animation: floating 3s ease-in-out infinite;
+}
+
+/* Responsive adjustment: Stack on mobile */
+@media (max-width: 992px) {
+  .pc-guide-section .container {
+      flex-direction: column;
+      text-align: left;
+  }
+  
+  .pc-guide-section h2 {
+      max-width: 100%;
+  }
+}
+.faq-section {
+  background-color: #f1f1f1;
+  padding: 40px 20px 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between accordion items */
+}
+
+details {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+summary {
+  padding: 20px 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a237e; /* Navy Blue */
+  cursor: pointer;
+  list-style: none; /* Removes default browser arrow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Custom Arrow Design */
+summary::after {
+  content: '';
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #1a237e;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  padding: 0 25px 20px;
+}
+
+.faq-content p {
+  color: #2c3e50;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Hover effect */
+details:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  summary {
+      font-size: 1rem;
+      padding: 15px;
+  }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+.hero-section {
+    background: linear-gradient(135deg, #4b39ef 0%, #d100ff 100%);
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.navbar { display: flex; justify-content: space-between; padding: 20px 8%; align-items: center; }
+.logo { font-size: 28px; font-weight: 800; letter-spacing: -1px; }
+.nav-links a { color: white; text-decoration: none; margin: 0 15px; font-weight: 500; opacity: 0.8; }
+.nav-links a.active { opacity: 1; border-bottom: 2px solid white; }
+
+.hero-content { padding: 80px 20px; }
+.hero-content h1 { font-size: 48px; margin-bottom: 10px; }
+.subtitle { margin-bottom: 40px; opacity: 0.9; }
+
+/* Input Card */
+.input-group { 
+    background: white; 
+    padding: 8px; border-radius: 50px; 
+    display: flex; max-width: 750px; margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.input-group input { 
+    flex: 1; border: none; padding: 15px 25px; 
+    font-size: 16px; outline: none; border-radius: 50px 0 0 50px;
+}
+.btn-white { background: #f0f0f0; border: none; padding: 0 20px; cursor: pointer; color: #4b39ef; font-weight: 600; border-radius: 25px; margin-right: 5px; }
+.btn-purple { background: #4b39ef; color: white; border: none; padding: 15px 35px; cursor: pointer; border-radius: 50px; font-weight: bold; font-size: 16px; transition: 0.3s; }
+.btn-purple:hover { background: #3a2ad1; transform: scale(1.02); }
+
+/* Result Card */
+.result-card {
+    background: white; color: #333; max-width: 500px; margin: 40px auto;
+    padding: 25px; border-radius: 20px; text-align: left;
+    display: flex; align-items: center; justify-content: space-between;
+    animation: slideUp 0.5s ease-out;
+}
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.music-info { display: flex; align-items: center; gap: 15px; }
+.music-info i { font-size: 30px; color: #d100ff; }
+.btn-download-now { background: #00d1b2; color: white; border: none; padding: 12px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; }
+
+/* Simple Loader */
+.loader {
+    border: 4px solid #f3f3f3; border-top: 4px solid #fff;
+    border-radius: 50%; width: 40px; height: 40px;
+    animation: spin 1s linear infinite; margin: 20px auto;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+/* Base Styles (Desktop) */
+.footer-section {
+  background-color: #1e2a5e;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between links */
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* --- Mobile Responsive Styles --- */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column; /* Stacks links vertically */
+    gap: 15px; /* Adjusts spacing for vertical layout */
+    margin-bottom: 25px;
+  }
+
+  .footer-links a {
+    font-size: 16px; /* Slightly smaller text for mobile */
+  }
+
+  .footer-content p {
+    font-size: 14px; /* Improves readability on narrow screens */
+    padding: 0 10px;
+  }
+  
+}
