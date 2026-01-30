@@ -1,1 +1,1 @@
-# quicktik.com
+# tiktok.com
